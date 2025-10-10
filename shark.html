@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharks from Space | Shark Species</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shark.css">
+</head>
+<body>
+
+<!-- Stars Canvas -->
+<canvas id="stars"></canvas>
+
+<!-- Header -->
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> Sharks from Space</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hard.html">Hardware</a></li>
+      <li><a href="learn.html">Learn more</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 class="title">Shark Species & Facts</h1>
+
+  <!-- Counters -->
+  <div class="counters">
+    <div class="counter">
+      <h2 id="speciesCount">0</h2>
+      <p>Marine Species Controlled</p>
+    </div>
+    <div class="counter">
+      <h2 id="biodiversity">0%</h2>
+      <p>Coral Reef Biodiversity Maintained</p>
+    </div>
+  </div>
+
+  <!-- Shark Panels -->
+  <section class="shark-panels">
+    <div class="panel" data-status="endangered">
+      <img src="white.jpeg" alt="Great White Shark">
+      <h3>Great White Shark</h3>
+      <p>Up to 6 m | Diet: Seals, Fish | Habitat: Coastal Waters</p>
+      <span class="funfact">Can detect one drop of blood in 25 gallons of water.</span>
+    </div>
+
+    <div class="panel" data-status="vulnerable">
+      <img src="sec.jpeg" alt="Hammerhead Shark">
+      <h3>Hammerhead Shark</h3>
+      <p>Up to 6 m | Diet: Rays, Squid | Habitat: Coastal & Open Ocean</p>
+      <span class="funfact">Head shape helps detect prey more effectively.</span>
+    </div>
+
+    <div class="panel" data-status="safe">
+      <img src="thi.jpeg" alt="Whale Shark">
+      <h3>Whale Shark</h3>
+      <p>Up to 18 m | Diet: Plankton | Habitat: Warm Oceans</p>
+      <span class="funfact">Largest fish in the ocean, gentle giant.</span>
+    </div>
+  
+
+  
+  <div class="panel" data-status="endangered">
+    <img src="tiger.jpeg" alt="Tiger Shark">
+    <h3>Tiger Shark</h3>
+    <p>Up to 5 m | Diet: Fish, seals, turtles | Habitat: Tropical & temperate seas</p>
+    <span class="funfact">Known as the "garbage eater" of the sea due to its varied diet.</span>
+  </div>
+
+  <div class="panel" data-status="safe">
+    <img src="nurse.jpeg" alt="Nurse Shark">
+    <h3>Nurse Shark</h3>
+    <p>Up to 3 m | Diet: Crustaceans, small fish | Habitat: Warm coastal waters</p>
+    <span class="funfact">Often rests in groups during the day and hunts at night.</span>
+  </div>
+
+  <div class="panel" data-status="safe">
+    <img src="maco.jpeg" alt="Mako Shark">
+    <h3>Mako Shark</h3>
+    <p>Up to 4 m | Diet: Fish, squid | Habitat: Open ocean</p>
+    <span class="funfact">Fastest shark in the ocean, can reach speeds up to 70 km/h.</span>
+  </div>
+
+  <div class="panel" data-status="endangered">
+    <img src="lep.jpeg" alt="Leopard Shark">
+    <h3>Leopard Shark</h3>
+    <p>Up to 1.5 m | Diet: Clams, worms, fish | Habitat: Shallow coastal waters</p>
+    <span class="funfact">Named for its striking leopard-like spots on its body.</span>
+  </div>
+
+  <div class="panel" data-status="vulnerable">
+    <img src="thresher.jpeg" alt="Thresher Shark">
+    <h3>Thresher Shark</h3>
+    <p>Up to 6 m | Diet: Small fish | Habitat: Coastal & open ocean</p>
+    <span class="funfact">Uses its long tail to stun schools of fish before eating.</span>
+  </div>
+
+  <div class="panel" data-status="safe">
+    <img src="bull.jpeg" alt="Bull Shark">
+    <h3>Bull Shark</h3>
+    <p>Up to 3.5 m | Diet: Fish, dolphins, other sharks | Habitat: Rivers & coastal seas</p>
+    <span class="funfact">Can live in both saltwater and freshwater environments.</span>
+  </div>
+
+  <div class="panel" data-status="endangered">
+    <img src="green.jpeg" alt="Greenland Shark">
+    <h3>Greenland Shark</h3>
+    <p>Up to 7 m | Diet: Fish, seals | Habitat: Cold Arctic waters</p>
+    <span class="funfact">One of the longest-living vertebrates — can live for 400 years!</span>
+  </div>
+
+  <div class="panel" data-status="vulnerable">
+    <img src="zebra.jpeg" alt="Zebra Shark">
+    <h3>Zebra Shark</h3>
+    <p>Up to 2.5 m | Diet: Mollusks, crustaceans | Habitat: Coral reefs</p>
+    <span class="funfact">Born with stripes that fade to spots as they grow older.</span>
+  </div>
+
+  <div class="panel" data-status="safe">
+    <img src="dusky.jpeg" alt="Dusky Shark">
+    <h3>Dusky Shark</h3>
+    <p>Up to 4 m | Diet: Bony fish, rays, squid | Habitat: Temperate & tropical seas</p>
+    <span class="funfact">Can migrate long distances across oceans for breeding.</span>
+  </div>
+</section>
+
+
+  <!-- Behavior Carousel -->
+  <section class="behavior-carousel">
+    <h2>Shark Behavior & Fun Facts</h2>
+    <br>
+    <br>
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <div class="carousel-item">Hunting & Feeding Styles</div>
+        <div class="carousel-item">Migration Patterns</div>
+        <div class="carousel-item">Reproduction & Lifespan</div>
+        <div class="carousel-item">Sensory Abilities</div>
+        <div class="carousel-item">Communication & Social Behavior</div>
+      </div>
+    </div>
+  </section>
+<br>
+<br>
+  <!-- Ecosystem Circle -->
+  <section class="ecosystem">
+    <h2>Importance in the Ecosystem</h2>
+    <div class="web-circle" id="webCircle">
+      <div class="node" data-info="Sharks control fish populations">Sharks</div>
+      <div class="node" data-info="Fish feed on plankton">Fish</div>
+      <div class="node" data-info="Plankton supports coral and ocean life">Plankton</div>
+      <div class="node" data-info="Healthy coral maintains ocean balance">Coral</div>
+      <div class="node" data-info="Humans rely on healthy oceans">Humans</div>
+    </div>
+  </section>
+</main>
+
+<script src="shark.js"></script>
+</body>
+</html>

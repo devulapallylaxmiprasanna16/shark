@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharks from Space | Science</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="science.css">
+</head>
+<body>
+
+<!-- Stars Canvas -->
+<canvas id="stars"></canvas>
+
+<!-- Header -->
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> Sharks from Space</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hard.html">Hardware</a></li>
+      <li><a href="learn.html">Learn more</a></li>
+
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 class="title">Science — Sharks & Satellites</h1>
+
+  <!-- How Satellites Work Section -->
+  <section class="section satellites">
+    <h2>How Satellites Work</h2>
+    <div class="satellite-diagram">
+      <img src="sati.jpeg" alt="Satellite Diagram">
+      <p>Satellites act as “space eyes” observing Earth’s oceans. They measure SST, currents, chlorophyll, and more to predict shark hotspots.</p>
+    </div>
+    <div class="fact-boxes">
+      <div class="fact">SST: Sharks prefer certain temperatures.</div>
+      <div class="fact">Currents: Affect migration & food availability.</div>
+      <div class="fact">Chlorophyll: Indicates plankton abundance.</div>
+    </div>
+  </section>
+
+  <!-- Key Satellites Section -->
+  <section class="section key-satellites">
+    <h2>Key Satellites Used</h2>
+    <div class="sat-cards">
+      <div class="sat-card">
+        <img src="onee.jpeg" alt="MODIS">
+        <h3>MODIS</h3>
+        <p>Measures ocean color and chlorophyll.</p>
+      </div>
+      <div class="sat-card">
+        <img src="two.jpeg" alt="Sentinel-3">
+        <h3>Sentinel-3</h3>
+        <p>Tracks SST and ocean currents.</p>
+      </div>
+      <div class="sat-card">
+        <img src="three.jpeg" alt="Jason-series">
+        <h3>Jason-series</h3>
+        <p>Measures sea level and currents.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facts Carousel -->
+  <section class="section facts">
+    <h2>Facts & Figures</h2>
+    <div class="facts-container">
+      <button class="arrow left" id="prev">&#8592;</button>
+      <div class="fact-slide">
+        <p class="fact-item active">Over 10 million measurements collected by satellites every day.</p>
+        <p class="fact-item">Satellite data helps locate over 50 shark hotspots globally.</p>
+        <p class="fact-item">Sea temperature variations of 1–2°C affect shark migration.</p>
+        <p class="fact-item">Some sharks migrate thousands of kilometers guided by temperature.</p>
+        <p class="fact-item">Chlorophyll levels indicate plankton abundance attracting sharks.</p>
+        <p class="fact-item">Currents influence shark feeding and migration patterns.</p>
+        <p class="fact-item">Satellites help track endangered shark species.</p>
+        <p class="fact-item">Sharks rely on ocean conditions to survive; satellites monitor this.</p>
+        <p class="fact-item">Satellite data aids marine ecosystem management.</p>
+        <p class="fact-item">Predictions reduce human-shark conflicts.</p>
+      </div>
+      <button class="arrow right" id="next">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- Recap Section -->
+  <section class="section recap">
+    <h2>Did You Learn?</h2>
+    <ul>
+      <li>Satellites are “eyes in space” for monitoring oceans.</li>
+      <li>Shark habitats, behavior, and migration are tracked.</li>
+      <li>Satellite science aids research, conservation, and safety.</li>
+      <li>Real-time data helps prevent conflicts and protect ecosystems.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="science.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+:root{
+  --sea-1:#041224;
+  --sea-2:#0b2749;
+  --glow:#00e1ff;
+  --card-bg:rgba(0,225,255,0.10);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:"Poppins",sans-serif;
+  background:radial-gradient(circle at bottom, var(--sea-1), var(--sea-2));
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* Stars Canvas */
+#stars{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  background:transparent;
+  pointer-events:none;
+}
+
+/* Header */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:100;
+  background:rgba(7,26,48,0.8);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 40px;
+  max-width:1200px;
+  margin:auto;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  color:var(--glow);
+  text-shadow:0 0 15px var(--glow);
+}
+.brand .dot{
+  width:12px;
+  height:12px;
+  background:var(--glow);
+  border-radius:50%;
+  box-shadow:0 0 15px var(--glow);
+}
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  transition:0.3s;
+}
+.nav-links a:hover,.nav-links a.active{
+  color:var(--glow);
+  text-shadow:0 0 10px var(--glow);
+}
+
+/* Hamburger */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+.hamburger span{
+  width:28px;
+  height:3px;
+  background:var(--glow);
+  border-radius:2px;
+  transition:0.3s;
+}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
+
+/* Mobile Menu */
+@media(max-width:991px){
+  .hamburger{display:flex;}
+  .nav-links{
+    position:fixed;
+    top:70px;
+    right:-100%;
+    flex-direction:column;
+    background:rgba(7,26,48,0.98);
+    width:70%;
+    height:100vh;
+    align-items:center;
+    justify-content:start;
+    padding-top:50px;
+    transition:0.4s;
+  }
+  .nav-links.open{right:0;}
+}
+
+/* Main Content */
+main{
+  position:relative;
+  z-index:10;
+  padding:100px 20px 60px;
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+h1.title{
+  font-size:3rem;
+  color:var(--glow);
+  text-shadow:0 0 20px rgba(0,225,255,0.3);
+  margin-bottom:40px;
+}
+
+/* Section Styling */
+.section{
+  margin:60px 0;
+}
+.section h2{
+  font-size:2rem;
+  margin-bottom:30px;
+  color:var(--glow);
+  text-shadow:0 0 10px rgba(0,225,255,0.2);
+}
+
+/* Satellite Diagram */
+.satellite-diagram{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+  padding:0 10px;
+}
+.satellite-diagram img{
+  width:100%;
+  max-width:400px;
+  height:auto;
+  border-radius:20px;
+  box-shadow:0 0 50px rgba(0,225,255,0.2);
+  transition:0.4s transform;
+}
+.satellite-diagram img:hover{
+  transform:scale(1.05);
+}
+.satellite-diagram p{
+  max-width:600px;
+  width:100%;
+  line-height:1.6;
+  font-size:1rem;
+  text-align:center;
+}
+
+/* Fact Boxes */
+.fact-boxes{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-top:20px;
+}
+.fact{
+  background:var(--card-bg);
+  padding:20px;
+  border-radius:15px;
+  min-width:200px;
+  max-width:250px;
+  text-align:center;
+  transition:0.3s all;
+  cursor:pointer;
+  box-shadow:0 0 30px rgba(0,225,255,0.1);
+}
+.fact:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 50px rgba(0,225,255,0.3);
+}
+
+/* Key Satellites Cards */
+.sat-cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.sat-card{
+  background:var(--card-bg);
+  width:220px;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 0 50px rgba(0,225,255,0.15);
+  transition:0.3s all;
+  cursor:pointer;
+}
+.sat-card img{
+  width:100%;
+  border-radius:15px;
+  margin-bottom:15px;
+  box-shadow:0 0 30px rgba(0,225,255,0.2);
+}
+.sat-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 70px rgba(0,225,255,0.3);
+}
+
+/* Facts Carousel */
+.facts-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  position:relative;
+}
+.arrow{
+  background:var(--glow);
+  color:#041224;
+  font-size:1.5rem;
+  border:none;
+  padding:10px 15px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.arrow:hover{
+  background:#00b8ff;
+  color:#fff;
+}
+.fact-slide{
+  width:400px;
+  max-width:80%;
+  min-height:80px;
+  overflow:hidden;
+  text-align:center;
+}
+.fact-item{
+  display:none;
+  font-size:1.1rem;
+  line-height:1.6;
+}
+.fact-item.active{
+  display:block;
+  animation:fadeIn 0.6s;
+}
+@keyframes fadeIn{
+  0%{opacity:0; transform:translateY(20px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+
+/* Recap Section */
+.recap ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-top:20px;
+}
+.recap li{
+  background:var(--card-bg);
+  padding:15px 20px;
+  border-radius:15px;
+  text-align:left;
+  box-shadow:0 0 40px rgba(0,225,255,0.1);
+}
+
+/* ----------------- MOBILE RESPONSIVE ----------------- */
+@media(max-width:991px){
+  main{
+    padding:100px 15px 40px;
+  }
+
+  /* Satellite diagram scaling */
+  .satellite-diagram{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding:0 10px;
+  }
+  .satellite-diagram img{
+    max-width:100%;
+    height:auto;
+  }
+  .satellite-diagram p{
+    max-width:100%;
+    font-size:0.95rem;
+    line-height:1.6;
+    text-align:center;
+  }
+
+  /* Fact boxes vertical */
+  .fact-boxes{
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+  }
+  .fact{
+    width:90%;
+    max-width:300px;
+    padding:20px;
+  }
+
+  /* Satellite cards vertical */
+  .sat-cards{
+    flex-direction:column;
+    gap:20px;
+    align-items:center;
+    width:100%;
+    padding:0 10px;
+  }
+  .sat-card{
+    width:100%;
+    max-width:300px;
+    padding:20px;
+  }
+
+  /* Facts carousel stack */
+  .facts-container{
+    flex-direction:column;
+    gap:15px;
+  }
+  .arrow{
+    margin:10px 0;
+  }
+  .fact-slide{
+    width:100%;
+    max-width:90%;
+  }
+
+  /* Recap list adjustments */
+  .recap ul{
+    gap:10px;
+    padding:0 10px;
+  }
+  .recap li{
+    width:100%;
+    padding:15px 20px;
+  }
+}
